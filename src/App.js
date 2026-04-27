@@ -1,31 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import ThreeScene from './components/ThreeScene';
 import { 
   FaGithub, FaLinkedin, FaEnvelope, FaCode, FaLaptopCode, FaBrain, 
-  FaPhoneAlt, FaSun, FaMoon, FaGraduationCap, FaChartLine, 
+  FaPhoneAlt, FaGraduationCap, FaChartLine, 
   FaPython, FaReact, FaJs, FaCss3Alt, FaHtml5 
 } from 'react-icons/fa';
 import { SiC, SiCplusplus, SiLeetcode } from 'react-icons/si';
 import { DiJava } from 'react-icons/di';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('light-mode');
-    } else {
-      document.body.classList.add('light-mode');
-      document.body.classList.remove('dark-mode');
-    }
-  }, [darkMode]);
+    document.body.classList.add('dark-mode');
+    document.body.classList.remove('light-mode');
+  }, []);
 
   return (
     <div className="App">
       <ThreeScene />
-      <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
       <Navbar />
       <Hero />
       <About />
@@ -38,18 +31,10 @@ function App() {
   );
 }
 
-const ThemeToggle = ({ darkMode, setDarkMode }) => {
-  return (
-    <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
-      {darkMode ? <FaSun /> : <FaMoon />}
-    </button>
-  );
-};
-
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="nav-brand">✨ Manoj Kumar M</div>
+      <div className="nav-brand">✨ MANOJ KUMAR M</div>
       <ul className="nav-links">
         <li><a href="#home">🏠 Home</a></li>
         <li><a href="#about">👤 About</a></li>
@@ -70,7 +55,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <div className="floating-badge">🚀 Available for Internship</div>
+        
         <h1 className="glitch-text">Manoj Kumar M</h1>
         <h2>Aspiring Software Developer</h2>
         <p className="typed-text">✨ CSE Student | Problem Solver | Tech Enthusiast ✨</p>
@@ -106,9 +91,8 @@ const About = () => {
         <h2 className="section-title">📖 About Me</h2>
         <div className="about-content">
           <div className="about-card">
-            <p>I'm a passionate CSE student who loves coding and learning new technologies. I enjoy solving problems and building projects to improve my skills. I'm always curious and eager to grow in the tech field.</p>
+            <p>I am a Computer Science engineering student with a strong interest in problem-solving and programming. I continuously work on improving my skills through coding practice and projects. I am consistent and resilient in overcoming challenges and learning new technologies. I enjoy exploring concepts beyond academics and building practical solutions. My goal is to grow as a skilled and impactful developer.</p>
             <p className="about-highlight">"Code. Create. Innovate."</p>
-            <p>Currently in my first year, I'm building a strong foundation in programming and web development. My goal is to become a full-stack developer and contribute to impactful projects.</p>
           </div>
         </div>
       </div>
@@ -208,7 +192,7 @@ const Academics = () => {
                 <div className="progress" style={{ width: '88.6%' }}></div>
               </div>
             </div>
-            <p>First Class with Distinction</p>
+           
           </div>
           
           <div className="academic-card">
@@ -220,7 +204,7 @@ const Academics = () => {
                 <div className="progress" style={{ width: '84.5%' }}></div>
               </div>
             </div>
-            <p>First Class with Distinction</p>
+           
           </div>
           
           <div className="academic-card">
@@ -232,7 +216,7 @@ const Academics = () => {
                 <div className="progress" style={{ width: '83.45%' }}></div>
               </div>
             </div>
-            <p>Pursuing CSE</p>
+           
           </div>
         </div>
       </div>
